@@ -506,6 +506,17 @@ func example13() {
 
 }
 
+func sageSaas(x, y int) (string, bool) {
+	returnStatement := "nicht saas"
+	returnBool := false
+	if x+y > 0 {
+		returnStatement = "saas"
+		returnBool = true
+		return returnStatement, returnBool
+	}
+	return returnStatement, returnBool
+}
+
 func main() {
 
 	example1()
@@ -521,4 +532,7 @@ func main() {
 	example11()
 	example12()
 	example13()
+	fmt.Println()
+	fmt.Println(sageSaas(-1, -4))
+	fmt.Println(sageSaas(1, 4))
 }
